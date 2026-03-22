@@ -291,8 +291,8 @@
                                 <line x1="28" y1="32" x2="36" y2="32" stroke="currentColor" stroke-width="1.5"/>
                             </svg>
                         </div>
-                        <h3>Compressão e Armazenamento de GLP</h3>
-                        <p>O Gás Liquefeito de Petróleo (propano e butano) é armazenado em botijões sob pressão de ~15 atm. Nessas condições, a equação ideal subestima a pressão real. A equação de Van der Waals é essencial para calcular corretamente a <strong>pressão máxima segura</strong> dos recipientes, os limites de temperatura de armazenamento e o ponto exato de liquefação.</p>
+                        <h3>GLP (Gás de Cozinha)</h3>
+                        <p>Propano e butano armazenados em botijões a ~15 atm. A equação de Van der Waals calcula a <strong>pressão segura</strong> e o ponto de liquefação, já que o modelo ideal falha nessas condições.</p>
                     </div>
                     <div class="app-card anim-slide-up anim-delay-2">
                         <div class="app-icon">
@@ -306,7 +306,7 @@
                             </svg>
                         </div>
                         <h3>Processo Haber-Bosch</h3>
-                        <p>A síntese industrial de amônia (N₂ + 3H₂ → 2NH₃) ocorre a <strong>~450°C e 150-200 atm</strong>. Nessas condições extremas, os gases se comportam de forma marcadamente não-ideal. Usar a equação PV=nRT levaria a erros de até 15-20% nos cálculos de rendimento. Este processo alimenta a produção mundial de fertilizantes. <strong>Cerca de 50% da comida no mundo</strong> depende dele.</p>
+                        <p>Síntese de amônia (NH₃) a <strong>~450°C e 200 atm</strong>. Nessas condições extremas, PV=nRT gera erros de 15-20%. Esse processo produz fertilizantes que alimentam metade da população mundial.</p>
                     </div>
                     <div class="app-card anim-slide-up anim-delay-3">
                         <div class="app-icon">
@@ -319,7 +319,7 @@
                             </svg>
                         </div>
                         <h3>Gases Hospitalares</h3>
-                        <p>Cilindros de oxigênio medicinal são armazenados a <strong>~200 atm</strong>. Nessa pressão, o O₂ apresenta Z ≈ 0,93, ou seja, ocupa ~7% menos volume que o previsto pela equação ideal. Ignorar esse desvio significaria errar na estimativa de <strong>quanto tempo de uso</strong> o cilindro oferece, com consequências potencialmente fatais. Anestésicos como o N₂O também exigem cálculos precisos de dosagem.</p>
+                        <p>O₂ medicinal armazenado a <strong>~200 atm</strong> (Z ≈ 0,93). Sem considerar o desvio, erra-se na estimativa de duração do cilindro. Anestésicos como N₂O também exigem cálculos precisos baseados em gases reais.</p>
                     </div>
                     <div class="app-card anim-slide-up anim-delay-4">
                         <div class="app-icon">
@@ -331,13 +331,13 @@
                             </svg>
                         </div>
                         <h3>Engenharia Petroquímica</h3>
-                        <p>No refino de petróleo, hidrocarbonetos gasosos são processados em <strong>temperaturas e pressões extremas</strong>. Reatores de craqueamento catalítico operam a ~500°C e pressões variadas. A modelagem precisa do comportamento dos gases é vital para a <strong>segurança operacional</strong>, eficiência energética e prevenção de acidentes como explosões e vazamentos tóxicos.</p>
+                        <p>Refino de petróleo envolve gases a <strong>~500°C e altas pressões</strong>. Modelos de gases reais são essenciais para garantir segurança e eficiência nos reatores de craqueamento catalítico.</p>
                     </div>
                 </div>
 
                 <div class="reflexao-box anim-fade-in anim-delay-2">
                     <h3>Reflexão Tecnológica</h3>
-                    <p>A equação ideal é uma ferramenta poderosa, mas <strong>decisões industriais reais</strong> não podem depender de um modelo simplificado. Quais riscos estão envolvidos quando engenheiros ignoram os desvios do comportamento ideal? A resposta está em acidentes como explosões de tanques de GLP, falhas em sistemas de ar comprimido e erros de dosagem em equipamentos hospitalares.</p>
+                    <p>Em todas essas aplicações, o modelo ideal é insuficiente. Decisões industriais que envolvem segurança e vidas humanas exigem modelos que considerem o comportamento real dos gases.</p>
                 </div>
             </div>
         </div>
@@ -404,35 +404,26 @@
                 <div class="content-grid">
                     <div class="text-block anim-slide-left">
                         <h3 class="subsection-title">CO₂ e Mudanças Climáticas</h3>
-                        <p>A concentração de CO₂ na atmosfera ultrapassou <strong>420 ppm</strong> em 2024, um aumento de mais de 50% em relação aos níveis pré-industriais (280 ppm). O CO₂ é um gás de efeito estufa que absorve radiação infravermelha e aquece a atmosfera.</p>
+                        <p>A concentração de CO₂ na atmosfera ultrapassou <strong>420 ppm</strong>, um aumento de mais de 50% em relação aos níveis pré-industriais. O CO₂ absorve radiação infravermelha e é o principal responsável pelo aquecimento global.</p>
 
-                        <p>Em condições atmosféricas normais, o CO₂ se comporta de forma razoavelmente ideal. Porém, quando pensamos em <strong>captura e armazenamento</strong> desse gás (tecnologia CCS, do inglês Carbon Capture and Storage), trabalhamos com pressões de 70-100 atm e temperaturas próximas ao ponto crítico (31°C, 73 atm). Nessas condições, o CO₂ se torna um <strong>fluido supercrítico</strong>: um estado que não é nem gás nem líquido. Seu comportamento só pode ser descrito por equações de estado para gases reais.</p>
+                        <p>Outros gases também contribuem: o <strong>metano (CH₄)</strong> é 80× mais potente que o CO₂, o <strong>N₂O</strong> é 273× mais potente, e os <strong>CFCs/HFCs</strong> (gases refrigerantes) chegam a milhares de vezes. Entender as propriedades reais desses gases é essencial para modelar o clima com precisão.</p>
 
-                        <h3 class="subsection-title">Gases de Efeito Estufa</h3>
-                        <p>Além do CO₂, outros gases contribuem fortemente para o aquecimento global:</p>
-                        <ul class="detail-list">
-                            <li><strong>Metano (CH₄):</strong> 80× mais potente que o CO₂ em 20 anos. Emitido por pecuária, aterros e vazamentos de gás natural</li>
-                            <li><strong>Óxido nitroso (N₂O):</strong> 273× mais potente que o CO₂. Vem de fertilizantes nitrogenados (ironia: o processo Haber-Bosch que alimenta bilhões também aquece o planeta)</li>
-                            <li><strong>CFCs e HFCs:</strong> gases refrigerantes sintéticos com potencial de aquecimento milhares de vezes maior que o CO₂</li>
-                        </ul>
+                        <h3 class="subsection-title">Poluição Atmosférica</h3>
+                        <p>Gases industriais como SO₂ e NOₓ reagem na atmosfera formando chuva ácida e smog. Prever como esses gases se dispersam e reagem depende de modelos que considerem o comportamento real em diferentes condições de pressão e temperatura.</p>
                     </div>
 
                     <div class="text-block anim-slide-right">
-                        <h3 class="subsection-title">Sequestro e Captura de Carbono (CCS)</h3>
-                        <p>A tecnologia de <strong>captura e armazenamento de carbono</strong> é uma das estratégias mais promissoras para mitigar as mudanças climáticas. O processo envolve:</p>
-                        <ul class="detail-list">
-                            <li><strong>Captura:</strong> separar o CO₂ dos gases de exaustão industriais</li>
-                            <li><strong>Transporte:</strong> comprimir o CO₂ e transportá-lo por dutos (como fluido supercrítico)</li>
-                            <li><strong>Armazenamento:</strong> injetar em formações geológicas profundas (aquíferos salinos, reservatórios de petróleo depletados)</li>
-                        </ul>
-                        <p>Em cada etapa, o conhecimento sobre <strong>gases reais é fundamental</strong>: as equações de Van der Waals e suas versões mais sofisticadas (Peng-Robinson, Soave-Redlich-Kwong) são usadas para calcular densidades, viscosidades e solubilidades do CO₂ em condições extremas.</p>
+                        <h3 class="subsection-title">Captura de Carbono (CCS)</h3>
+                        <p>A tecnologia CCS (Carbon Capture and Storage) captura CO₂ de emissões industriais, comprime e armazena em formações geológicas profundas. O processo envolve pressões de <strong>70-100 atm</strong>, onde o CO₂ vira um <strong>fluido supercrítico</strong> (nem gás, nem líquido).</p>
+
+                        <p>Nessas condições o CO₂ apresenta Z ≈ 0,2-0,3, desviando enormemente do ideal. Sem modelos de gases reais, seria impossível calcular com segurança o transporte e armazenamento desse gás.</p>
 
                         <div class="info-card">
-                            <h3>Desvios em altas pressões atmosféricas</h3>
+                            <h3>Conexão com Gases Reais</h3>
                             <ul>
-                                <li>Em pressões acima de 50 atm, o CO₂ apresenta Z ≈ 0,2-0,3. Desvia enormemente do ideal</li>
-                                <li>A liquefação do CO₂ para transporte e armazenamento exige modelos precisos de gases reais</li>
-                                <li>Erros de modelagem podem causar vazamentos em reservatórios geológicos, anulando o benefício ambiental</li>
+                                <li>Liquefação do CO₂ exige cálculos com equações de gases reais</li>
+                                <li>Erros de modelagem podem causar vazamentos em reservatórios</li>
+                                <li>Van der Waals e suas evoluções (Peng-Robinson) são usadas na engenharia de CCS</li>
                             </ul>
                         </div>
                     </div>
