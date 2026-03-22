@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria do Estado Gasoso | Portfólio Digital Reflexivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navegação fixa -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">Gases</div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#fundamentos">Fundamentos</a></li>
+            <li><a href="#gas-ideal">Gás Ideal</a></li>
+            <li><a href="#gas-real">Gás Real</a></li>
+            <li><a href="#aplicacoes">Tecnologia</a></li>
+            <li><a href="#impactos">Sociedade</a></li>
+            <li><a href="#ambiente">Ambiente</a></li>
+        </ul>
+    </nav>
+
+    <!-- Indicador de progresso -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- HERO -->
+    <section class="parallax-section hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title anim-fade-in">
+                <span class="title-line">Estado Gasoso</span>
+                <span class="title-subtitle anim-fade-in anim-delay-1">Modelos, Indústria e Impactos Socioambientais</span>
+            </h1>
+            <p class="hero-meta anim-fade-in anim-delay-2">Físico-Química &bull; Abordagem CTSA &bull; Profª Denise Rocco de Sena</p>
+            <div class="scroll-indicator anim-fade-in anim-delay-2">
+                <span>Role para explorar</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 1. FUNDAMENTOS TEÓRICOS                      -->
+    <!-- ============================================ -->
+    <section class="parallax-section section-intro" id="fundamentos">
+        <div class="parallax-bg" data-speed="0.3"></div>
+        <div class="section-content">
+            <div class="container">
+                <h2 class="section-title anim-slide-up">Teoria Cinética dos Gases</h2>
+
+                <div class="content-grid">
+                    <div class="text-block anim-slide-left">
+                        <p class="lead">A <strong>Teoria Cinética Molecular</strong> é o alicerce para compreender o comportamento dos gases. Desenvolvida ao longo do século XIX por cientistas como Clausius, Maxwell e Boltzmann, ela propõe que a matéria no estado gasoso é composta por partículas em <strong>constante movimento aleatório</strong>.</p>
+
+                        <p>Segundo esse modelo, as moléculas de um gás se deslocam em linha reta até colidirem com outras moléculas ou com as paredes do recipiente. Essas colisões são consideradas <strong>perfeitamente elásticas</strong>, ou seja, não há perda de energia cinética total no sistema. A <strong>pressão</strong> que medimos em um recipiente nada mais é do que o resultado do imenso número de colisões das partículas contra suas paredes a cada segundo.</p>
+
+                        <p>A temperatura, nesse contexto, está diretamente relacionada à <strong>energia cinética média</strong> das moléculas. Quanto maior a temperatura, mais rápido as partículas se movem, resultando em colisões mais frequentes e mais intensas. Portanto, maior pressão.</p>
+                    </div>
+                    <div class="info-card anim-slide-right">
+                        <h3>Premissas do Modelo Ideal</h3>
+                        <ul>
+                            <li><strong>Volume desprezível:</strong> as partículas são tão pequenas em relação ao recipiente que seu volume próprio é considerado nulo</li>
+                            <li><strong>Sem interações:</strong> não existem forças de atração ou repulsão entre as moléculas</li>
+                            <li><strong>Colisões elásticas:</strong> a energia cinética total se conserva em cada colisão</li>
+                            <li><strong>Movimento contínuo:</strong> as partículas nunca param de se mover, seguindo trajetórias retilíneas entre colisões</li>
+                        </ul>
+                        <div class="card-note">
+                            <p><strong>Reflexão:</strong> Essas premissas simplificam a realidade. Nenhum gás real se comporta exatamente assim. Mas o modelo é poderoso justamente porque, apesar das simplificações, descreve bem o comportamento dos gases em muitas condições.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="counters-row anim-fade-in anim-delay-2">
+                    <div class="counter-item">
+                        <span class="counter" data-target="8.314" data-suffix=" J/mol·K" data-decimals="3">0</span>
+                        <span class="counter-label">Constante universal R</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter" data-target="1873" data-suffix="" data-decimals="0">0</span>
+                        <span class="counter-label">Van der Waals publica sua equação</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter" data-target="200" data-suffix=" atm" data-decimals="0">0</span>
+                        <span class="counter-label">Pressão em cilindros hospitalares de O₂</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter" data-target="450" data-suffix="°C" data-decimals="0">0</span>
+                        <span class="counter-label">Temperatura no processo Haber-Bosch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. GÁS IDEAL: PV = nRT                     -->
+    <!-- ============================================ -->
+    <section class="parallax-section section-lei-zero" id="gas-ideal">
+        <div class="parallax-bg" data-speed="0.4"></div>
+        <div class="section-content">
+            <div class="container">
+                <div class="lei-header anim-slide-up">
+                    <span class="lei-number" style="font-size: clamp(2rem, 4vmin, 3.5rem);">PV=nRT</span>
+                    <h2 class="section-title">Equação do Gás Ideal</h2>
+                </div>
+
+                <div class="formula-box anim-scale-in anim-delay-1">
+                    <div class="formula">
+                        <span class="formula-part" data-info="Pressão (P): força exercida pelas moléculas do gás por unidade de área ao colidirem com as paredes do recipiente. Medida em atm, Pa, mmHg ou bar. Em CNTP, a pressão padrão é 1 atm (101.325 Pa).">P</span>
+                        <span class="formula-part" data-info="Volume (V): espaço ocupado pelo gás no recipiente, medido em litros (L) ou m³. Uma propriedade fundamental dos gases é que eles se expandem para ocupar todo o volume disponível, diferentemente de líquidos e sólidos.">V</span>
+                        =
+                        <span class="formula-part" data-info="Número de mols (n): quantidade de matéria do gás. 1 mol contém exatamente 6,022 × 10²³ partículas (constante de Avogadro). Em CNTP, 1 mol de qualquer gás ideal ocupa 22,4 litros, chamado de volume molar.">n</span>
+                        <span class="formula-part" data-info="Constante universal dos gases (R): R = 8,314 J·mol⁻¹·K⁻¹ no SI, ou 0,0821 atm·L·mol⁻¹·K⁻¹. É a mesma para todos os gases ideais. Conecta energia, temperatura e quantidade de matéria.">R</span>
+                        <span class="formula-part" data-info="Temperatura absoluta (T): deve ser sempre expressa em Kelvin (K = °C + 273,15). O zero absoluto (0 K) é o limite teórico onde as partículas teriam energia cinética mínima. Nunca use Celsius diretamente nas equações dos gases!">T</span>
+                    </div>
+                    <div class="formula-tooltip" id="formulaTooltip"></div>
+                    <div class="formula-legend">
+                        <span>Clique em cada variável para saber mais</span>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="text-block anim-slide-left">
+                        <p>A <strong>equação dos gases ideais</strong> é uma das equações mais importantes da Físico-Química. Ela unifica as leis experimentais de Boyle (P×V = constante, a T constante), Charles (V/T = constante, a P constante) e Avogadro (V/n = constante, a P e T constantes) em uma única expressão matemática elegante.</p>
+
+                        <p>Na prática, este modelo funciona muito bem quando o gás está em condições de <strong>baixa pressão</strong> e <strong>alta temperatura</strong>, ou seja, quando as moléculas estão suficientemente afastadas umas das outras para que as interações intermoleculares e o volume próprio das partículas possam ser desprezados.</p>
+
+                        <p>Um conceito essencial é o de <strong>CNTP</strong> (Condições Normais de Temperatura e Pressão): T = 273,15 K (0°C) e P = 1 atm. Nessas condições, 1 mol de qualquer gás ideal ocupa exatamente <strong>22,4 litros</strong>, o chamado volume molar.</p>
+
+                        <p>Porém, a pergunta que surge naturalmente é: <em>até que ponto podemos confiar nesse modelo?</em> À medida que a pressão aumenta ou a temperatura diminui, os desvios se tornam significativos. É aí que precisamos dos gases reais.</p>
+                    </div>
+                    <div class="diagram-container anim-slide-right">
+                        <div class="equilibrium-diagram">
+                            <div class="system-box" id="systemA">
+                                <span class="system-label">Pressão</span>
+                                <span class="temp-display" id="displayP">1 atm</span>
+                            </div>
+                            <div class="equilibrium-arrow">
+                                <svg viewBox="0 0 80 24" width="60" height="20">
+                                    <line x1="0" y1="12" x2="70" y2="12" stroke="currentColor" stroke-width="2"/>
+                                    <polygon points="70,6 80,12 70,18" fill="currentColor"/>
+                                </svg>
+                                <span>PV = nRT</span>
+                                <svg viewBox="0 0 80 24" width="60" height="20" style="transform: scaleX(-1)">
+                                    <line x1="0" y1="12" x2="70" y2="12" stroke="currentColor" stroke-width="2"/>
+                                    <polygon points="70,6 80,12 70,18" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="system-box" id="systemB">
+                                <span class="system-label">Volume</span>
+                                <span class="temp-display" id="displayV">22.4 L</span>
+                            </div>
+                        </div>
+                        <p class="diagram-hint anim-fade-in anim-delay-2">Clique nas caixas para alterar P e ver o V calculado (n=1 mol, T=273K)</p>
+
+                        <div class="info-card" style="margin-top: 20px;">
+                            <h3>Por que o modelo ideal é útil?</h3>
+                            <ul>
+                                <li><strong>Simplicidade:</strong> permite cálculos rápidos com boa aproximação</li>
+                                <li><strong>Base comparativa:</strong> serve de referência para medir desvios reais</li>
+                                <li><strong>Universalidade:</strong> a mesma equação vale para qualquer gás</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. GÁS REAL: Van der Waals & Fator Z        -->
+    <!-- ============================================ -->
+    <section class="parallax-section section-primeira-lei" id="gas-real">
+        <div class="parallax-bg" data-speed="0.5"></div>
+        <div class="section-content">
+            <div class="container">
+                <div class="lei-header anim-slide-up">
+                    <span class="lei-number" style="font-size: clamp(1.5rem, 3vmin, 2.5rem);">Z ≠ 1</span>
+                    <h2 class="section-title">Gases Reais e a Equação de Van der Waals</h2>
+                </div>
+
+                <div class="lei-statement anim-fade-in anim-delay-1">
+                    <blockquote>
+                        "Nenhum gás é verdadeiramente ideal. Moléculas reais ocupam espaço e interagem entre si. São exatamente esses 'defeitos' que determinam fenômenos fundamentais como a liquefação."
+                    </blockquote>
+                </div>
+
+                <div class="content-grid">
+                    <div class="text-block anim-slide-left">
+                        <p class="lead">Em 1873, o físico holandês <strong>Johannes van der Waals</strong> propôs uma correção à equação dos gases ideais que levava em conta dois fatores ignorados pelo modelo simplificado:</p>
+
+                        <p><strong>1. Volume próprio das moléculas (parâmetro b):</strong> em altas pressões, as moléculas ficam tão próximas que o volume ocupado pelas próprias partículas não pode mais ser desprezado. O volume "livre" para o gás se mover é menor que o volume total do recipiente, então corrigimos: V → (V − nb).</p>
+
+                        <p><strong>2. Forças de atração intermolecular (parâmetro a):</strong> em baixas temperaturas ou quando as moléculas estão próximas, as forças de Van der Waals (dipolo-dipolo, London) atraem as moléculas umas às outras, reduzindo a pressão efetiva sobre as paredes. Corrigimos: P → (P + an²/V²).</p>
+
+                        <p>Os valores de <strong>a</strong> e <strong>b</strong> são específicos para cada gás. Por exemplo, o CO₂ tem a = 3,59 L²·atm/mol² e b = 0,0427 L/mol, enquanto o He tem valores muito menores (a = 0,0342; b = 0,0238), pois suas interações intermoleculares são mínimas.</p>
+                    </div>
+                    <div class="text-block anim-slide-right">
+                        <div class="formula-box">
+                            <span class="formula" style="font-size: clamp(1rem, 2.2vmin, 1.6rem);">(P + a·n²/V²)(V − n·b) = nRT</span>
+                            <div class="formula-legend">
+                                <span>a = atração intermolecular</span>
+                                <span>b = volume molecular</span>
+                            </div>
+                        </div>
+
+                        <h3 class="subsection-title">O Fator de Compressibilidade (Z)</h3>
+                        <p>O <strong>fator Z = PV/nRT</strong> é uma medida direta de quanto um gás se desvia do comportamento ideal:</p>
+                        <ul class="detail-list">
+                            <li><strong>Z = 1:</strong> comportamento ideal perfeito</li>
+                            <li><strong>Z &lt; 1:</strong> predominam forças de atração. As moléculas se "puxam" e o gás ocupa menos volume que o previsto</li>
+                            <li><strong>Z &gt; 1:</strong> predomina o efeito do volume molecular. As moléculas "se empurram" e o gás ocupa mais volume que o previsto</li>
+                        </ul>
+
+                        <p>Próximo ao <strong>ponto crítico</strong> (temperatura e pressão específicas de cada substância), os desvios são máximos. Acima da temperatura crítica, o gás não pode ser liquefeito por compressão, independentemente da pressão aplicada.</p>
+
+                        <div class="entropy-visual" style="margin-top: 16px;">
+                            <div class="entropy-box">
+                                <div class="entropy-state">
+                                    <span class="state-label">Gás Ideal → Real</span>
+                                    <div class="particles-ordered" id="entropyParticles">
+                                        <span class="particle blue"></span>
+                                        <span class="particle blue"></span>
+                                        <span class="particle blue"></span>
+                                        <span class="particle blue"></span>
+                                        <span class="particle blue"></span>
+                                        <span class="particle blue"></span>
+                                    </div>
+                                    <span class="entropy-label" id="entropyLabel">Sem interações (Z = 1)</span>
+                                </div>
+                                <div class="entropy-controls">
+                                    <button class="btn-interactive" id="btnShuffle">Comprimir</button>
+                                    <button class="btn-interactive btn-secondary" id="btnReset">Expandir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. APLICAÇÕES TECNOLÓGICAS                   -->
+    <!-- ============================================ -->
+    <section class="parallax-section section-segunda-lei" id="aplicacoes">
+        <div class="parallax-bg" data-speed="0.4"></div>
+        <div class="section-content">
+            <div class="container">
+                <h2 class="section-title anim-slide-up">Aplicações Tecnológicas</h2>
+                <p class="section-subtitle anim-fade-in anim-delay-1">Em quais situações o modelo ideal é insuficiente? Como a equação de Van der Waals melhora previsões industriais?</p>
+
+                <div class="cards-grid cards-grid-detailed">
+                    <div class="app-card anim-slide-up anim-delay-1">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <rect x="20" y="8" width="24" height="44" rx="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="24" y1="52" x2="40" y2="52" stroke="currentColor" stroke-width="2"/>
+                                <line x1="32" y1="52" x2="32" y2="58" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="20" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="28" y1="32" x2="36" y2="32" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Compressão e Armazenamento de GLP</h3>
+                        <p>O Gás Liquefeito de Petróleo (propano e butano) é armazenado em botijões sob pressão de ~15 atm. Nessas condições, a equação ideal subestima a pressão real. A equação de Van der Waals é essencial para calcular corretamente a <strong>pressão máxima segura</strong> dos recipientes, os limites de temperatura de armazenamento e o ponto exato de liquefação.</p>
+                    </div>
+                    <div class="app-card anim-slide-up anim-delay-2">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <rect x="8" y="20" width="48" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="20" x2="20" y2="48" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="44" y1="20" x2="44" y2="48" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M12 14 L20 20" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M52 14 L44 20" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="32" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Processo Haber-Bosch</h3>
+                        <p>A síntese industrial de amônia (N₂ + 3H₂ → 2NH₃) ocorre a <strong>~450°C e 150-200 atm</strong>. Nessas condições extremas, os gases se comportam de forma marcadamente não-ideal. Usar a equação PV=nRT levaria a erros de até 15-20% nos cálculos de rendimento. Este processo alimenta a produção mundial de fertilizantes. <strong>Cerca de 50% da comida no mundo</strong> depende dele.</p>
+                    </div>
+                    <div class="app-card anim-slide-up anim-delay-3">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <rect x="12" y="8" width="16" height="48" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="36" y="8" width="16" height="48" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="14" x2="20" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="44" y1="14" x2="44" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M28 30 L36 30" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Gases Hospitalares</h3>
+                        <p>Cilindros de oxigênio medicinal são armazenados a <strong>~200 atm</strong>. Nessa pressão, o O₂ apresenta Z ≈ 0,93, ou seja, ocupa ~7% menos volume que o previsto pela equação ideal. Ignorar esse desvio significaria errar na estimativa de <strong>quanto tempo de uso</strong> o cilindro oferece, com consequências potencialmente fatais. Anestésicos como o N₂O também exigem cálculos precisos de dosagem.</p>
+                    </div>
+                    <div class="app-card anim-slide-up anim-delay-4">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 8 L32 16 M32 48 L32 56 M8 32 L16 32 M48 32 L56 32" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="32" cy="32" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Engenharia Petroquímica</h3>
+                        <p>No refino de petróleo, hidrocarbonetos gasosos são processados em <strong>temperaturas e pressões extremas</strong>. Reatores de craqueamento catalítico operam a ~500°C e pressões variadas. A modelagem precisa do comportamento dos gases é vital para a <strong>segurança operacional</strong>, eficiência energética e prevenção de acidentes como explosões e vazamentos tóxicos.</p>
+                    </div>
+                </div>
+
+                <div class="reflexao-box anim-fade-in anim-delay-2">
+                    <h3>Reflexão Tecnológica</h3>
+                    <p>A equação ideal é uma ferramenta poderosa, mas <strong>decisões industriais reais</strong> não podem depender de um modelo simplificado. Quais riscos estão envolvidos quando engenheiros ignoram os desvios do comportamento ideal? A resposta está em acidentes como explosões de tanques de GLP, falhas em sistemas de ar comprimido e erros de dosagem em equipamentos hospitalares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. IMPACTOS SOCIAIS                          -->
+    <!-- ============================================ -->
+    <section class="parallax-section section-terceira-lei" id="impactos">
+        <div class="parallax-bg" data-speed="0.3"></div>
+        <div class="section-content">
+            <div class="container">
+                <h2 class="section-title anim-slide-up">Impactos Sociais</h2>
+
+                <div class="lei-statement anim-fade-in anim-delay-1">
+                    <blockquote>
+                        "Quem se beneficia e quem é afetado pela industrialização dos gases? Como o conhecimento científico influencia políticas públicas?"
+                    </blockquote>
+                </div>
+
+                <div class="content-grid">
+                    <div class="text-block anim-slide-left">
+                        <h3 class="subsection-title">Segurança no Armazenamento</h3>
+                        <p>A explosão no porto de Beirute em agosto de 2020, causada por 2.750 toneladas de nitrato de amônio armazenadas inadequadamente, é um exemplo trágico de como a negligência com substâncias químicas gasosas e reativas pode devastar uma cidade inteira. Foram <strong>218 mortos, mais de 7.000 feridos</strong> e 300.000 desabrigados.</p>
+
+                        <p>Acidentes envolvendo <strong>vazamentos de GLP</strong> em residências e comércios são responsáveis por centenas de mortes anuais no Brasil. A norma ABNT NBR 13523 regulamenta a instalação de centrais de GLP, exigindo cálculos que consideram o comportamento real do gás, e não o ideal.</p>
+
+                        <h3 class="subsection-title">Gases Medicinais e Saúde Pública</h3>
+                        <p>Durante a pandemia de COVID-19, o Brasil enfrentou uma <strong>crise de oxigênio hospitalar</strong>, especialmente em Manaus (janeiro de 2021), onde a falta de O₂ causou mortes por asfixia em hospitais lotados. A logística de produção, transporte e armazenamento de oxigênio depende diretamente de cálculos baseados no comportamento real dos gases sob alta pressão.</p>
+
+                        <p>Gases anestésicos como o <strong>N₂O (óxido nitroso)</strong> e o <strong>sevoflurano</strong> são administrados em doses precisas. Erros nos cálculos de concentração, que dependem de entender como esses gases se comportam sob diferentes pressões, podem levar a subdosagem (paciente acorda durante cirurgia) ou sobredosagem (depressão respiratória fatal).</p>
+                    </div>
+
+                    <div class="text-block anim-slide-right">
+                        <h3 class="subsection-title">Desenvolvimento Industrial e Qualidade de Vida</h3>
+                        <p>A industrialização dos gases trouxe avanços inquestionáveis: a refrigeração (conservação de alimentos), os fertilizantes nitrogenados (produção agrícola), a medicina moderna (anestesia, oxigenoterapia) e a energia (combustíveis gasosos). Mas esses benefícios <strong>não são distribuídos igualmente</strong>.</p>
+
+                        <p>Comunidades próximas a polos industriais e petroquímicos, geralmente de baixa renda, sofrem desproporcionalmente com <strong>poluição, riscos de explosão e contaminação</strong> do ar e da água. O conceito de <strong>justiça ambiental</strong> questiona essa distribuição desigual de riscos e benefícios.</p>
+
+                        <div class="info-card">
+                            <h3>Questões para Reflexão</h3>
+                            <ul>
+                                <li>A quem servem os avanços tecnológicos na área de gases industriais?</li>
+                                <li>Como garantir que o conhecimento científico se traduza em políticas públicas que protejam as populações mais vulneráveis?</li>
+                                <li>Qual é a responsabilidade ética dos profissionais de química perante a sociedade?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. QUESTÕES AMBIENTAIS                       -->
+    <!-- ============================================ -->
+    <section class="parallax-section section-aplicacoes" id="ambiente">
+        <div class="parallax-bg" data-speed="0.3"></div>
+        <div class="section-content">
+            <div class="container">
+                <h2 class="section-title anim-slide-up">Questões Ambientais</h2>
+                <p class="section-subtitle anim-fade-in anim-delay-1">Como o conhecimento sobre gases reais ajuda no enfrentamento das mudanças climáticas?</p>
+
+                <div class="content-grid">
+                    <div class="text-block anim-slide-left">
+                        <h3 class="subsection-title">CO₂ e Mudanças Climáticas</h3>
+                        <p>A concentração de CO₂ na atmosfera ultrapassou <strong>420 ppm</strong> em 2024, um aumento de mais de 50% em relação aos níveis pré-industriais (280 ppm). O CO₂ é um gás de efeito estufa que absorve radiação infravermelha e aquece a atmosfera.</p>
+
+                        <p>Em condições atmosféricas normais, o CO₂ se comporta de forma razoavelmente ideal. Porém, quando pensamos em <strong>captura e armazenamento</strong> desse gás (tecnologia CCS, do inglês Carbon Capture and Storage), trabalhamos com pressões de 70-100 atm e temperaturas próximas ao ponto crítico (31°C, 73 atm). Nessas condições, o CO₂ se torna um <strong>fluido supercrítico</strong>: um estado que não é nem gás nem líquido. Seu comportamento só pode ser descrito por equações de estado para gases reais.</p>
+
+                        <h3 class="subsection-title">Gases de Efeito Estufa</h3>
+                        <p>Além do CO₂, outros gases contribuem fortemente para o aquecimento global:</p>
+                        <ul class="detail-list">
+                            <li><strong>Metano (CH₄):</strong> 80× mais potente que o CO₂ em 20 anos. Emitido por pecuária, aterros e vazamentos de gás natural</li>
+                            <li><strong>Óxido nitroso (N₂O):</strong> 273× mais potente que o CO₂. Vem de fertilizantes nitrogenados (ironia: o processo Haber-Bosch que alimenta bilhões também aquece o planeta)</li>
+                            <li><strong>CFCs e HFCs:</strong> gases refrigerantes sintéticos com potencial de aquecimento milhares de vezes maior que o CO₂</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-block anim-slide-right">
+                        <h3 class="subsection-title">Sequestro e Captura de Carbono (CCS)</h3>
+                        <p>A tecnologia de <strong>captura e armazenamento de carbono</strong> é uma das estratégias mais promissoras para mitigar as mudanças climáticas. O processo envolve:</p>
+                        <ul class="detail-list">
+                            <li><strong>Captura:</strong> separar o CO₂ dos gases de exaustão industriais</li>
+                            <li><strong>Transporte:</strong> comprimir o CO₂ e transportá-lo por dutos (como fluido supercrítico)</li>
+                            <li><strong>Armazenamento:</strong> injetar em formações geológicas profundas (aquíferos salinos, reservatórios de petróleo depletados)</li>
+                        </ul>
+                        <p>Em cada etapa, o conhecimento sobre <strong>gases reais é fundamental</strong>: as equações de Van der Waals e suas versões mais sofisticadas (Peng-Robinson, Soave-Redlich-Kwong) são usadas para calcular densidades, viscosidades e solubilidades do CO₂ em condições extremas.</p>
+
+                        <div class="info-card">
+                            <h3>Desvios em altas pressões atmosféricas</h3>
+                            <ul>
+                                <li>Em pressões acima de 50 atm, o CO₂ apresenta Z ≈ 0,2-0,3. Desvia enormemente do ideal</li>
+                                <li>A liquefação do CO₂ para transporte e armazenamento exige modelos precisos de gases reais</li>
+                                <li>Erros de modelagem podem causar vazamentos em reservatórios geológicos, anulando o benefício ambiental</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reflexao-box anim-fade-in anim-delay-2">
+                    <h3>Reflexão Ambiental</h3>
+                    <p>A mesma ciência que possibilitou a industrialização (e suas emissões) agora oferece ferramentas para combatê-las. A compreensão profunda do comportamento dos gases reais é o que permite desenvolver tecnologias como CCS, filtros industriais e modelagem climática precisa. <strong>O conhecimento científico não é neutro: ele pode ser usado tanto para explorar quanto para proteger.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- REFLEXÃO CRÍTICA + REFERÊNCIAS               -->
+    <!-- ============================================ -->
+    <footer class="section-footer" id="referencias">
+        <div class="container">
+            <h2 class="section-title anim-fade-in">Reflexão Crítica</h2>
+            <div class="references-list anim-fade-in anim-delay-1">
+                <div class="reflexao-final">
+                    <p><strong>Como a ciência se relaciona com tecnologia e sociedade?</strong> O estudo dos gases não é apenas teoria: ele sustenta indústrias que alimentam bilhões, salva vidas em hospitais, e ao mesmo tempo contribui para a crise climática que ameaça o futuro do planeta.</p>
+                    <p><strong>O modelo ideal é suficiente para decisões industriais?</strong> Não. Embora seja uma ferramenta pedagógica e aproximativa valiosa, decisões que envolvem segurança, saúde e meio ambiente exigem modelos que respeitem a complexidade do mundo real.</p>
+                    <p><strong>Que responsabilidade ética envolve o uso industrial de gases?</strong> Profissionais de química carregam a responsabilidade de garantir que o conhecimento científico seja aplicado com rigor, transparência e consciência dos impactos sociais e ambientais.</p>
+                    <p><strong>Como esse conteúdo impacta minha formação profissional?</strong> Compreender a ponte entre modelos teóricos e aplicações reais é o que diferencia um técnico de um profissional crítico: capaz de questionar, inovar e proteger.</p>
+                </div>
+            </div>
+            <h2 class="section-title anim-fade-in" style="margin-top: 48px;">Referências</h2>
+            <div class="references-list anim-fade-in anim-delay-1">
+                <ul class="ref-list">
+                    <li>ATKINS, P.; DE PAULA, J. <em>Físico-Química</em>. 10. ed. Rio de Janeiro: LTC, 2018. v. 1.</li>
+                    <li>CASTELLAN, G. W. <em>Fundamentos de Físico-Química</em>. Rio de Janeiro: LTC, 1986.</li>
+                    <li>MOORE, W. J. <em>Físico-Química</em>. São Paulo: Edgard Blücher, 1976. v. 1.</li>
+                    <li>BALL, D. W. <em>Físico-Química</em>. São Paulo: Cengage Learning, 2005. v. 1.</li>
+                    <li>LEVINE, I. N. <em>Physical Chemistry</em>. 6. ed. New York: McGraw-Hill, 2009.</li>
+                    <li>VAN DER WAALS, J. D. <em>Over de Continuïteit van den Gas- en Vloeistoftoestand</em>. Tese de Doutorado, Universidade de Leiden, 1873.</li>
+                    <li>IPCC. <em>Climate Change 2023: Synthesis Report</em>. Contribution of Working Groups I, II and III to the Sixth Assessment Report. Geneva: IPCC, 2023.</li>
+                    <li>GLOBAL CCS INSTITUTE. <em>Global Status of CCS 2023</em>. Melbourne: Global CCS Institute, 2023.</li>
+                    <li>ABNT. <em>NBR 13523: Instalações de centrais de gás liquefeito de petróleo</em>. Rio de Janeiro: ABNT, 2019.</li>
+                    <li>ERISMAN, J. W. et al. How a century of ammonia synthesis changed the world. <em>Nature Geoscience</em>, v. 1, p. 636-639, 2008.</li>
+                    <li>BRASIL. Ministério da Saúde. <em>Resolução RDC nº 50/2002</em>: regulamento técnico para gases medicinais. Brasília: Anvisa, 2002.</li>
+                </ul>
+            </div>
+
+            <div class="footer-credits anim-fade-in anim-delay-2">
+                <p>Portfólio Digital Reflexivo · Físico-Química · 2026</p>
+                <p>Profª Denise Rocco de Sena</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/parallax.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/interactive-diagrams.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
