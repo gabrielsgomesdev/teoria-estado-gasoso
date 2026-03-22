@@ -784,6 +784,101 @@ body {
 }
 
 /* ============================
+   Z FACTOR CHART
+   ============================ */
+.chart-section {
+    margin-top: 40px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.chart-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 2 / 1;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.chart-analysis {
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .chart-section {
+        padding: 20px 16px;
+        margin-top: 24px;
+    }
+
+    .chart-container {
+        aspect-ratio: 3 / 2;
+    }
+
+    .chart-description {
+        font-size: 0.82rem;
+    }
+
+    .chart-legend {
+        gap: 10px;
+    }
+
+    .legend-item {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-section {
+        padding: 14px 12px;
+    }
+
+    .chart-container {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+/* ============================
    INTERACTIVE BUTTONS
    ============================ */
 .btn-interactive {

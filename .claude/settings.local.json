@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(start:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(cp \"C:/Projetos/Termodinamica/docs/ORIENTAÇÕES PORTFÓLIO DIGITAL REFLEXIVO.pdf\" /tmp/escopo.pdf)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

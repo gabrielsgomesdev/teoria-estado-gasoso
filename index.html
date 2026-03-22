@@ -224,26 +224,45 @@
                         </ul>
 
                         <p>Próximo ao <strong>ponto crítico</strong> (temperatura e pressão específicas de cada substância), os desvios são máximos. Acima da temperatura crítica, o gás não pode ser liquefeito por compressão, independentemente da pressão aplicada.</p>
+                    </div>
+                </div>
 
-                        <div class="entropy-visual" style="margin-top: 16px;">
-                            <div class="entropy-box">
-                                <div class="entropy-state">
-                                    <span class="state-label">Gás Ideal → Real</span>
-                                    <div class="particles-ordered" id="entropyParticles">
-                                        <span class="particle blue"></span>
-                                        <span class="particle blue"></span>
-                                        <span class="particle blue"></span>
-                                        <span class="particle blue"></span>
-                                        <span class="particle blue"></span>
-                                        <span class="particle blue"></span>
-                                    </div>
-                                    <span class="entropy-label" id="entropyLabel">Sem interações (Z = 1)</span>
-                                </div>
-                                <div class="entropy-controls">
-                                    <button class="btn-interactive" id="btnShuffle">Comprimir</button>
-                                    <button class="btn-interactive btn-secondary" id="btnReset">Expandir</button>
-                                </div>
+                <!-- GRÁFICO DE COMPRESSIBILIDADE -->
+                <div class="chart-section anim-fade-in anim-delay-2">
+                    <h3 class="subsection-title" style="text-align: center;">Gráfico do Fator de Compressibilidade (Z) vs Pressão</h3>
+                    <p class="chart-description">O gráfico abaixo mostra como diferentes gases desviam do comportamento ideal (Z = 1) à medida que a pressão aumenta. Passe o mouse sobre as curvas para ver os valores.</p>
+                    <div class="chart-container">
+                        <canvas id="zChart" width="800" height="400"></canvas>
+                    </div>
+                    <div class="chart-legend" id="chartLegend"></div>
+                    <div class="chart-analysis">
+                        <h3 class="subsection-title">Análise do Gráfico</h3>
+                        <ul class="detail-list">
+                            <li><strong>Hidrogênio (H₂) e Hélio (He):</strong> apresentam Z > 1 em praticamente toda a faixa de pressão. Como suas moléculas são muito pequenas e as forças intermoleculares são extremamente fracas, o efeito dominante é o volume próprio das moléculas (repulsão). O gás se comporta como se fosse "mais expansivo" que o previsto pelo modelo ideal.</li>
+                            <li><strong>Nitrogênio (N₂) e Oxigênio (O₂):</strong> mostram uma depressão inicial (Z &lt; 1) em pressões moderadas, onde as forças de atração dominam, seguida de um aumento (Z > 1) em pressões altas, onde o volume molecular prevalece. Essa curva em forma de "vale" é o comportamento mais comum entre os gases.</li>
+                            <li><strong>CO₂ e NH₃:</strong> apresentam os maiores desvios negativos (Z muito menor que 1) em pressões intermediárias. Isso ocorre porque possuem forças intermoleculares mais intensas (CO₂ é quadrupolar, NH₃ faz ligações de hidrogênio). Em pressões próximas ao ponto crítico, o CO₂ pode atingir Z ≈ 0,2, desviando enormemente do ideal.</li>
+                            <li><strong>Condições próximas ao ponto crítico:</strong> todos os gases apresentam desvios máximos quando se aproximam de suas temperaturas e pressões críticas. Nessas condições, o gás está prestes a liquefazer e o modelo ideal falha completamente. Por exemplo, o CO₂ tem ponto crítico em 31°C e 73 atm.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entropy-visual anim-fade-in" style="margin-top: 32px; max-width: 400px; margin-left: auto; margin-right: auto;">
+                    <div class="entropy-box">
+                        <div class="entropy-state">
+                            <span class="state-label">Gás Ideal → Real</span>
+                            <div class="particles-ordered" id="entropyParticles">
+                                <span class="particle blue"></span>
+                                <span class="particle blue"></span>
+                                <span class="particle blue"></span>
+                                <span class="particle blue"></span>
+                                <span class="particle blue"></span>
+                                <span class="particle blue"></span>
                             </div>
+                            <span class="entropy-label" id="entropyLabel">Sem interações (Z = 1)</span>
+                        </div>
+                        <div class="entropy-controls">
+                            <button class="btn-interactive" id="btnShuffle">Comprimir</button>
+                            <button class="btn-interactive btn-secondary" id="btnReset">Expandir</button>
                         </div>
                     </div>
                 </div>
