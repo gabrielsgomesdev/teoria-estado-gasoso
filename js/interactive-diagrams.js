@@ -253,7 +253,7 @@
             var plotH = h - pad.top - pad.bottom;
 
             // Background
-            zCtx.fillStyle = 'rgba(245, 247, 250, 0.9)';
+            zCtx.fillStyle = '#ffffff';
             zCtx.fillRect(0, 0, w, h);
 
             // Grid

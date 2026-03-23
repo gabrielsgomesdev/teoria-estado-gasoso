@@ -10,7 +10,7 @@
 :root {
     /* Paleta frio → quente */
     --cold-dark: #ffffff;
-    --cold: #f5f7fa;
+    --cold: #ffffff;
     --cold-mid: #1a4a7a;
     --neutral: #2d6a9f;
     --warm-mid: #c4650e;
@@ -43,6 +43,10 @@ body {
     background: #ffffff;
     line-height: 1.7;
     overflow-x: hidden;
+}
+
+html {
+    background: #ffffff;
 }
 
 /* ============================
@@ -197,7 +201,7 @@ body {
    ============================ */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 50%, #dce4ed 100%);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -422,27 +426,27 @@ body {
    SECTION BACKGROUNDS
    ============================ */
 .section-intro {
-    background: linear-gradient(180deg, #f5f7fa 0%, #edf2f7 100%);
+    background: #ffffff;
 }
 
 .section-lei-zero {
-    background: linear-gradient(180deg, #edf2f7 0%, #e2e8f0 100%);
+    background: #fafafa;
 }
 
 .section-primeira-lei {
-    background: linear-gradient(180deg, #e2e8f0 0%, #edf2f7 100%);
+    background: #ffffff;
 }
 
 .section-segunda-lei {
-    background: linear-gradient(180deg, #edf2f7 0%, #f5f7fa 100%);
+    background: #fafafa;
 }
 
 .section-terceira-lei {
-    background: linear-gradient(180deg, #f5f7fa 0%, #edf2f7 100%);
+    background: #ffffff;
 }
 
 .section-aplicacoes {
-    background: linear-gradient(180deg, #edf2f7 0%, #f5f7fa 100%);
+    background: #fafafa;
 }
 
 /* ============================
@@ -1051,7 +1055,7 @@ body {
    FOOTER
    ============================ */
 .section-footer {
-    background: #f5f7fa;
+    background: #ffffff;
     padding: 100px 0 60px;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
