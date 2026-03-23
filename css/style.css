@@ -35,6 +35,11 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
