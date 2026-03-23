@@ -68,8 +68,8 @@
 
 /* Glow effect for highlighted elements */
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(244, 184, 96, 0.1); }
-    50% { box-shadow: 0 0 40px rgba(244, 184, 96, 0.2); }
+    0%, 100% { box-shadow: 0 2px 12px rgba(212, 117, 46, 0.08); }
+    50% { box-shadow: 0 4px 24px rgba(212, 117, 46, 0.15); }
 }
 
 .formula-box {
@@ -93,7 +93,7 @@
     display: block;
     width: 0;
     height: 1px;
-    background: var(--warm-light);
+    background: var(--warm);
     transition: width 0.3s ease;
     margin-top: 2px;
 }

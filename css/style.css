@@ -9,19 +9,19 @@
 
 :root {
     /* Paleta frio → quente */
-    --cold-dark: #0a1628;
-    --cold: #0f2847;
+    --cold-dark: #ffffff;
+    --cold: #f5f7fa;
     --cold-mid: #1a4a7a;
     --neutral: #2d6a9f;
-    --warm-mid: #d4752e;
-    --warm: #e8943a;
-    --warm-light: #f4b860;
-    --hot: #ff6b35;
+    --warm-mid: #c4650e;
+    --warm: #d4752e;
+    --warm-light: #b8651a;
+    --hot: #e05520;
 
     /* Cores de texto */
-    --text-primary: #f0f0f0;
-    --text-secondary: #b0c4de;
-    --text-muted: #7a8fa6;
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
 
     /* Espaçamentos */
     --section-padding: 40px 0;
@@ -40,7 +40,7 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--text-primary);
-    background: var(--cold-dark);
+    background: #ffffff;
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -74,9 +74,9 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 22, 40, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-brand {
@@ -120,8 +120,8 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--warm-light);
-    background: rgba(244, 184, 96, 0.1);
+    color: var(--warm);
+    background: rgba(212, 117, 46, 0.1);
 }
 
 /* Hamburger */
@@ -139,7 +139,7 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--text-primary);
+    background: var(--text-secondary);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -197,7 +197,7 @@ body {
    ============================ */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--cold-dark) 0%, #0d1f3c 50%, #162d50 100%);
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 50%, #dce4ed 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,7 +227,7 @@ body {
     display: block;
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
-    background: linear-gradient(135deg, var(--warm-light), var(--hot), var(--warm));
+    background: linear-gradient(135deg, #d4752e, #e05520, #c4650e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -302,7 +302,7 @@ body {
 }
 
 .text-block strong {
-    color: var(--warm-light);
+    color: var(--warm);
 }
 
 .text-block em {
@@ -314,11 +314,11 @@ body {
    INFO CARD
    ============================ */
 .info-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: clamp(16px, 2.5vmin, 32px);
-    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .card-icon {
@@ -330,7 +330,7 @@ body {
     font-family: var(--font-heading);
     font-size: 1.4rem;
     margin-bottom: 16px;
-    color: var(--warm-light);
+    color: var(--warm);
 }
 
 .info-card ul {
@@ -340,7 +340,7 @@ body {
 .info-card li {
     padding: clamp(4px, 0.8vmin, 8px) 0;
     color: var(--text-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     font-size: clamp(0.8rem, 1.3vmin, 0.95rem);
 }
 
@@ -367,7 +367,7 @@ body {
     font-size: clamp(3rem, 6vmin, 5rem);
     font-weight: 800;
     line-height: 1;
-    background: linear-gradient(135deg, var(--warm-light), var(--hot));
+    background: linear-gradient(135deg, #d4752e, #e05520);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -381,7 +381,7 @@ body {
     border-left: 3px solid var(--warm);
     padding: clamp(8px, 1.5vmin, 16px) clamp(12px, 2vmin, 24px);
     margin-bottom: clamp(16px, 2.5vmin, 32px);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.02);
     border-radius: 0 8px 8px 0;
 }
 
@@ -392,15 +392,16 @@ body {
     text-align: center;
     margin: clamp(12px, 2vmin, 32px) 0;
     padding: clamp(16px, 2.5vmin, 32px);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .formula {
     font-size: clamp(1.6rem, 3.5vmin, 2.5rem);
     font-weight: 700;
-    color: var(--warm-light);
+    color: var(--warm);
     letter-spacing: 0.05em;
 }
 
@@ -421,27 +422,27 @@ body {
    SECTION BACKGROUNDS
    ============================ */
 .section-intro {
-    background: linear-gradient(180deg, var(--cold-dark) 0%, #0d1f3c 100%);
+    background: linear-gradient(180deg, #f5f7fa 0%, #edf2f7 100%);
 }
 
 .section-lei-zero {
-    background: linear-gradient(180deg, #0d1f3c 0%, #112a4a 100%);
+    background: linear-gradient(180deg, #edf2f7 0%, #e2e8f0 100%);
 }
 
 .section-primeira-lei {
-    background: linear-gradient(180deg, #112a4a 0%, #1a3a5c 100%);
+    background: linear-gradient(180deg, #e2e8f0 0%, #edf2f7 100%);
 }
 
 .section-segunda-lei {
-    background: linear-gradient(180deg, #1a3a5c 0%, #2a3a4c 100%);
+    background: linear-gradient(180deg, #edf2f7 0%, #f5f7fa 100%);
 }
 
 .section-terceira-lei {
-    background: linear-gradient(180deg, #2a3a4c 0%, #1a2a3c 100%);
+    background: linear-gradient(180deg, #f5f7fa 0%, #edf2f7 100%);
 }
 
 .section-aplicacoes {
-    background: linear-gradient(180deg, #1a2a3c 0%, #0f1a2a 100%);
+    background: linear-gradient(180deg, #edf2f7 0%, #f5f7fa 100%);
 }
 
 /* ============================
@@ -456,13 +457,14 @@ body {
 }
 
 .system-box {
-    background: rgba(255, 255, 255, 0.06);
+    background: #ffffff;
     border: 2px solid var(--cold-mid);
     border-radius: 12px;
     padding: 24px;
     text-align: center;
     min-width: 120px;
     transition: border-color 0.5s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .system-label {
@@ -475,7 +477,7 @@ body {
 .temp-display {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--warm-light);
+    color: var(--warm);
 }
 
 .equilibrium-arrow {
@@ -522,7 +524,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.03);
     border-radius: 8px;
     min-width: 100px;
 }
@@ -616,17 +618,19 @@ body {
 }
 
 .app-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     padding: clamp(12px, 2vmin, 24px) clamp(10px, 1.5vmin, 20px);
     text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .app-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(244, 184, 96, 0.3);
+    border-color: rgba(212, 117, 46, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .app-icon {
@@ -642,7 +646,7 @@ body {
 .app-card h3 {
     font-family: var(--font-heading);
     font-size: clamp(0.9rem, 1.5vmin, 1.2rem);
-    color: var(--warm-light);
+    color: var(--warm);
     margin-bottom: clamp(6px, 1vmin, 12px);
 }
 
@@ -656,11 +660,12 @@ body {
    EXAMPLE CARD
    ============================ */
 .example-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: clamp(16px, 2.5vmin, 32px);
     text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .example-icon {
@@ -670,7 +675,7 @@ body {
 
 .example-card h3 {
     font-family: var(--font-heading);
-    color: var(--warm-light);
+    color: var(--warm);
     margin-bottom: 16px;
 }
 
@@ -685,7 +690,7 @@ body {
 .subsection-title {
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    color: var(--warm-light);
+    color: var(--warm);
     margin: 24px 0 12px;
 }
 
@@ -702,7 +707,7 @@ body {
 .detail-list li {
     padding: 8px 0 8px 16px;
     color: var(--text-secondary);
-    border-left: 2px solid rgba(244, 184, 96, 0.3);
+    border-left: 2px solid rgba(212, 117, 46, 0.4);
     margin-bottom: 8px;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -715,7 +720,7 @@ body {
 .card-note {
     margin-top: 16px;
     padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .card-note p {
@@ -728,15 +733,15 @@ body {
 .reflexao-box {
     margin-top: 40px;
     padding: 24px 32px;
-    background: rgba(244, 184, 96, 0.06);
-    border: 1px solid rgba(244, 184, 96, 0.15);
+    background: rgba(212, 117, 46, 0.05);
+    border: 1px solid rgba(212, 117, 46, 0.15);
     border-radius: 16px;
     border-left: 4px solid var(--warm);
 }
 
 .reflexao-box h3 {
     font-family: var(--font-heading);
-    color: var(--warm-light);
+    color: var(--warm);
     font-size: 1.2rem;
     margin-bottom: 12px;
 }
@@ -755,7 +760,7 @@ body {
 }
 
 .reflexao-final p strong {
-    color: var(--warm-light);
+    color: var(--warm);
     display: block;
     margin-bottom: 4px;
     font-size: 1.05rem;
@@ -789,9 +794,10 @@ body {
 .chart-section {
     margin-top: 40px;
     padding: 32px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .chart-description {
@@ -882,9 +888,9 @@ body {
    INTERACTIVE BUTTONS
    ============================ */
 .btn-interactive {
-    background: rgba(244, 184, 96, 0.15);
-    color: var(--warm-light);
-    border: 1px solid rgba(244, 184, 96, 0.3);
+    background: rgba(212, 117, 46, 0.1);
+    color: var(--warm);
+    border: 1px solid rgba(212, 117, 46, 0.3);
     padding: 8px 20px;
     border-radius: 24px;
     font-family: var(--font-body);
@@ -894,19 +900,19 @@ body {
 }
 
 .btn-interactive:hover {
-    background: rgba(244, 184, 96, 0.25);
-    border-color: var(--warm-light);
+    background: rgba(212, 117, 46, 0.2);
+    border-color: var(--warm);
     transform: translateY(-1px);
 }
 
 .btn-interactive.btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.04);
     color: var(--text-secondary);
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 0, 0, 0.12);
 }
 
 .btn-interactive.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.08);
     color: var(--text-primary);
 }
 
@@ -931,7 +937,7 @@ body {
 .particles-ordered.compressed {
     gap: 2px;
     padding: 8px;
-    background: rgba(232, 148, 58, 0.15);
+    background: rgba(212, 117, 46, 0.1);
     border-color: var(--warm);
 }
 
@@ -963,12 +969,12 @@ body {
 }
 
 .formula-part:hover {
-    background: rgba(244, 184, 96, 0.15);
+    background: rgba(212, 117, 46, 0.1);
 }
 
 .formula-part.active {
-    background: rgba(244, 184, 96, 0.25);
-    color: var(--warm-light);
+    background: rgba(212, 117, 46, 0.15);
+    color: var(--warm);
 }
 
 .formula-tooltip {
@@ -976,7 +982,7 @@ body {
     color: var(--text-secondary);
     margin-top: 12px;
     padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.03);
     border-radius: 8px;
     border-left: 3px solid var(--warm);
     max-width: 500px;
@@ -1007,16 +1013,17 @@ body {
 .counter-item {
     text-align: center;
     padding: clamp(10px, 1.5vmin, 20px);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .counter {
     display: block;
     font-size: clamp(1.4rem, 3vmin, 2.2rem);
     font-weight: 800;
-    color: var(--warm-light);
+    color: var(--warm);
     font-family: var(--font-heading);
     line-height: 1.2;
 }
@@ -1044,9 +1051,9 @@ body {
    FOOTER
    ============================ */
 .section-footer {
-    background: var(--cold-dark);
+    background: #f5f7fa;
     padding: 100px 0 60px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .section-footer .section-title {
@@ -1076,7 +1083,7 @@ body {
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.6;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     position: relative;
 }
 
@@ -1092,7 +1099,7 @@ body {
 }
 
 .ref-list li em {
-    color: var(--warm-light);
+    color: var(--warm);
 }
 
 .footer-credits {
@@ -1100,7 +1107,7 @@ body {
     font-size: 0.85rem;
     padding-top: 24px;
     margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
     text-align: center;
 }
 
@@ -1119,12 +1126,13 @@ body {
         width: 70%;
         max-width: 300px;
         height: 100vh;
-        background: rgba(10, 22, 40, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(16px);
         flex-direction: column;
         padding: 80px 24px 24px;
         gap: 4px;
         transition: right 0.3s ease;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.open {

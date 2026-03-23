@@ -151,7 +151,7 @@
             // Draw particle
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fillStyle = `hsla(${p.hue}, 70%, 65%, ${p.opacity})`;
+            ctx.fillStyle = `hsla(${p.hue}, 60%, 45%, ${p.opacity})`;
             ctx.fill();
 
             // Draw connections
@@ -165,7 +165,7 @@
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(244, 184, 96, ${0.08 * (1 - dist / 120)})`;
+                    ctx.strokeStyle = `rgba(212, 117, 46, ${0.12 * (1 - dist / 120)})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }

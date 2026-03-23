@@ -21,7 +21,7 @@
     right: -5%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(26, 74, 122, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(26, 74, 122, 0.06) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -32,7 +32,7 @@
     left: -5%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(45, 106, 159, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45, 106, 159, 0.05) 0%, transparent 70%);
     border-radius: 50%;
 }
 

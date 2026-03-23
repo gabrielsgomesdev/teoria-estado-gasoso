@@ -206,32 +206,32 @@
         var gases = [
             {
                 name: 'H₂',
-                color: '#4fc3f7',
+                color: '#0288d1',
                 data: [[0,1],[50,1.03],[100,1.06],[200,1.13],[400,1.28],[600,1.44],[800,1.61],[1000,1.8]]
             },
             {
                 name: 'He',
-                color: '#81d4fa',
+                color: '#0097a7',
                 data: [[0,1],[50,1.02],[100,1.05],[200,1.10],[400,1.22],[600,1.34],[800,1.48],[1000,1.62]]
             },
             {
                 name: 'N₂',
-                color: '#aed581',
+                color: '#388e3c',
                 data: [[0,1],[50,0.98],[100,0.97],[200,0.99],[400,1.10],[600,1.24],[800,1.40],[1000,1.58]]
             },
             {
                 name: 'O₂',
-                color: '#fff176',
+                color: '#f9a825',
                 data: [[0,1],[50,0.97],[100,0.96],[200,0.98],[400,1.08],[600,1.22],[800,1.37],[1000,1.54]]
             },
             {
                 name: 'CO₂',
-                color: '#ff8a65',
+                color: '#e65100',
                 data: [[0,1],[50,0.82],[100,0.68],[200,0.52],[400,0.78],[600,1.05],[800,1.30],[1000,1.52]]
             },
             {
                 name: 'NH₃',
-                color: '#f48fb1',
+                color: '#c2185b',
                 data: [[0,1],[50,0.75],[100,0.58],[200,0.42],[400,0.65],[600,0.92],[800,1.18],[1000,1.42]]
             }
         ];
@@ -253,11 +253,11 @@
             var plotH = h - pad.top - pad.bottom;
 
             // Background
-            zCtx.fillStyle = 'rgba(15, 25, 45, 0.6)';
+            zCtx.fillStyle = 'rgba(245, 247, 250, 0.9)';
             zCtx.fillRect(0, 0, w, h);
 
             // Grid
-            zCtx.strokeStyle = 'rgba(255,255,255,0.08)';
+            zCtx.strokeStyle = 'rgba(0,0,0,0.08)';
             zCtx.lineWidth = 1;
 
             // Y axis grid (Z values)
@@ -269,7 +269,7 @@
                 zCtx.lineTo(w - pad.right, y);
                 zCtx.stroke();
 
-                zCtx.fillStyle = 'rgba(176, 196, 222, 0.6)';
+                zCtx.fillStyle = 'rgba(74, 85, 104, 0.7)';
                 zCtx.font = '11px Inter, sans-serif';
                 zCtx.textAlign = 'right';
                 zCtx.fillText(z.toFixed(1), pad.left - 8, y + 4);
@@ -284,14 +284,14 @@
                 zCtx.lineTo(x, pad.top + plotH);
                 zCtx.stroke();
 
-                zCtx.fillStyle = 'rgba(176, 196, 222, 0.6)';
+                zCtx.fillStyle = 'rgba(74, 85, 104, 0.7)';
                 zCtx.textAlign = 'center';
                 zCtx.fillText(p + '', x, h - pad.bottom + 20);
             }
 
             // Z = 1 reference line (ideal gas)
             var idealY = pad.top + plotH - ((1 - zMin) / (zMax - zMin)) * plotH;
-            zCtx.strokeStyle = 'rgba(244, 184, 96, 0.4)';
+            zCtx.strokeStyle = 'rgba(212, 117, 46, 0.5)';
             zCtx.setLineDash([6, 4]);
             zCtx.lineWidth = 1.5;
             zCtx.beginPath();
@@ -300,13 +300,13 @@
             zCtx.stroke();
             zCtx.setLineDash([]);
 
-            zCtx.fillStyle = 'rgba(244, 184, 96, 0.6)';
+            zCtx.fillStyle = 'rgba(212, 117, 46, 0.7)';
             zCtx.textAlign = 'left';
             zCtx.font = '11px Inter, sans-serif';
             zCtx.fillText('Gás Ideal (Z = 1)', w - pad.right - 110, idealY - 6);
 
             // Axis labels
-            zCtx.fillStyle = 'rgba(176, 196, 222, 0.8)';
+            zCtx.fillStyle = 'rgba(74, 85, 104, 0.8)';
             zCtx.font = '12px Inter, sans-serif';
             zCtx.textAlign = 'center';
             zCtx.fillText('Pressão (atm)', w / 2, h - 8);
