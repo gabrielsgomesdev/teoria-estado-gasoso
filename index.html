@@ -281,39 +281,104 @@
                 <h2 class="section-title anim-slide-up">Aplicações Tecnológicas</h2>
                 <p class="section-subtitle anim-fade-in anim-delay-1">Em quais situações o modelo ideal é insuficiente? Como a equação de Van der Waals melhora previsões industriais?</p>
 
-                <div class="cards-grid cards-grid-detailed">
-                    <div class="app-card anim-slide-up anim-delay-1">
-                        <div class="app-icon">
-                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
-                                <rect x="20" y="8" width="24" height="44" rx="12" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <line x1="24" y1="52" x2="40" y2="52" stroke="currentColor" stroke-width="2"/>
-                                <line x1="32" y1="52" x2="32" y2="58" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="32" cy="20" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                                <line x1="28" y1="32" x2="36" y2="32" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3>GLP (Gás de Cozinha)</h3>
-                        <p>Propano e butano armazenados em botijões a ~15 atm. A equação de Van der Waals calcula a <strong>pressão segura</strong> e o ponto de liquefação, já que o modelo ideal falha nessas condições.</p>
+                <div class="content-grid anim-fade-in anim-delay-1">
+                    <div class="text-block anim-slide-left">
+                        <h3 class="subsection-title">GLP: Gás Liquefeito de Petróleo</h3>
+                        <p>O GLP é uma mistura de <strong>propano (C₃H₈)</strong> e <strong>butano (C₄H₁₀)</strong>, obtida durante o refino do petróleo ou o processamento de gás natural. Ele é o combustível utilizado nos botijões de cozinha de milhões de lares brasileiros e também em aplicações industriais, automotivas e agrícolas.</p>
+
+                        <h3 class="subsection-title">Como Funciona o Processo</h3>
+                        <p><strong>1. Obtenção:</strong> Na refinaria, o petróleo bruto é aquecido em torres de destilação fracionada. As frações mais leves (propano e butano) são separadas no topo da torre, onde as temperaturas de ebulição são mais baixas.</p>
+
+                        <p><strong>2. Liquefação e armazenamento:</strong> Propano e butano são gases à temperatura e pressão ambientes. Para armazená-los de forma compacta, são <strong>comprimidos a ~15 atm</strong> dentro dos botijões, o que os transforma em líquido. Esse processo depende criticamente da <strong>equação de Van der Waals</strong>: a equação de gás ideal (PV = nRT) subestima a pressão necessária para a liquefação, pois ignora as forças intermoleculares e o volume próprio das moléculas.</p>
+
+                        <p><strong>3. Uso doméstico:</strong> Ao abrir a válvula do botijão, a pressão interna diminui e o líquido volta a evaporar, fornecendo gás combustível de forma contínua. A chama do fogão resulta da combustão: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O.</p>
+
+                        <p><strong>4. Papel da equação de Van der Waals:</strong> Engenheiros utilizam a equação (P + a/V²)(V − b) = RT para calcular com precisão a <strong>pressão máxima segura</strong> do botijão, a <strong>temperatura crítica</strong> de armazenamento e o <strong>ponto exato de liquefação</strong>. Erros nesses cálculos podem causar explosões ou falhas no fornecimento.</p>
                     </div>
-                    <div class="app-card anim-slide-up anim-delay-2">
-                        <div class="app-icon">
-                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
-                                <rect x="8" y="20" width="48" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <line x1="20" y1="20" x2="20" y2="48" stroke="currentColor" stroke-width="1.5"/>
-                                <line x1="44" y1="20" x2="44" y2="48" stroke="currentColor" stroke-width="1.5"/>
-                                <path d="M12 14 L20 20" stroke="currentColor" stroke-width="1.5"/>
-                                <path d="M52 14 L44 20" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="32" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
+
+                    <div class="text-block anim-slide-right">
+                        <h3 class="subsection-title">Por Que o Modelo Ideal Falha?</h3>
+                        <p>A ~15 atm, as moléculas de propano e butano estão muito próximas. Nessa condição, as <strong>forças de Van der Waals</strong> (atrações intermoleculares) e o <strong>volume molecular</strong> tornam-se significativos. O fator de compressibilidade Z se afasta de 1, revelando que PV ≠ nRT. Ignorar esse desvio pode levar a erros de até <strong>10-15%</strong> na previsão da pressão interna do botijão.</p>
+
+                        <div class="info-card">
+                            <h3>GLP em Números</h3>
+                            <ul>
+                                <li>Pressão de armazenamento: ~15 atm (botijão P-13)</li>
+                                <li>Temperatura crítica do propano: 96,7 °C</li>
+                                <li>Temperatura crítica do butano: 152,0 °C</li>
+                                <li>Mais de 90% dos lares brasileiros utilizam GLP</li>
+                                <li>Consumo anual no Brasil: ~13 milhões de toneladas</li>
+                            </ul>
                         </div>
-                        <h3>Processo Haber-Bosch</h3>
-                        <p>Síntese de amônia (NH₃) a <strong>~450°C e 200 atm</strong>. Nessas condições extremas, PV=nRT gera erros de 15-20%. Esse processo produz fertilizantes que alimentam metade da população mundial.</p>
                     </div>
                 </div>
 
                 <div class="reflexao-box anim-fade-in anim-delay-2">
                     <h3>Reflexão Tecnológica</h3>
-                    <p>Em todas essas aplicações, o modelo ideal é insuficiente. Decisões industriais que envolvem segurança e vidas humanas exigem modelos que considerem o comportamento real dos gases.</p>
+                    <p>O GLP ilustra perfeitamente como o modelo de gás ideal é insuficiente para decisões industriais reais. Da refinaria ao fogão da sua casa, cada etapa depende de cálculos que consideram o comportamento real dos gases — e qualquer erro pode custar vidas.</p>
+                </div>
+
+                <!-- LEGISLAÇÕES E NORMAS -->
+                <h3 class="subsection-title anim-slide-up" style="margin-top: 40px;">Legislações e Normas de Segurança</h3>
+                <p class="anim-fade-in" style="margin-bottom: 20px; color: var(--text-secondary);">Empresas que produzem, transportam e comercializam GLP e outros gases devem seguir rigorosas normas ambientais e de segurança para evitar acidentes e proteger a população.</p>
+
+                <div class="cards-grid cards-grid-detailed">
+                    <div class="app-card anim-slide-up anim-delay-1">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <rect x="12" y="8" width="40" height="48" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="18" x2="44" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="20" y1="26" x2="44" y2="26" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="20" y1="34" x2="36" y2="34" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="32" cy="46" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="32" y1="43" x2="32" y2="47" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Normas Técnicas (ABNT)</h3>
+                        <p><strong>NBR 13523</strong> — Regulamenta a instalação de centrais de GLP, exigindo cálculos de pressão baseados no comportamento real do gás, distâncias mínimas de segurança e sistemas de ventilação.</p>
+                        <p><strong>NBR 15514</strong> — Estabelece requisitos para a área de armazenamento de recipientes transportáveis de GLP, incluindo sinalização, extintores e afastamentos.</p>
+                        <p><strong>NBR 15526</strong> — Define critérios para redes de distribuição interna de gases combustíveis em instalações residenciais e comerciais.</p>
+                    </div>
+                    <div class="app-card anim-slide-up anim-delay-2">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <path d="M32 8 L56 52 L8 52 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="32" y1="24" x2="32" y2="38" stroke="currentColor" stroke-width="2.5"/>
+                                <circle cx="32" cy="45" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Normas Regulamentadoras (NRs)</h3>
+                        <p><strong>NR-13</strong> — Caldeiras, vasos de pressão e tubulações: exige inspeções periódicas, válvulas de segurança e treinamento de operadores para equipamentos que armazenam gases sob pressão.</p>
+                        <p><strong>NR-20</strong> — Segurança com inflamáveis e combustíveis: classifica instalações por grau de risco, exige plano de emergência, análise de riscos e capacitação dos trabalhadores.</p>
+                        <p><strong>NR-26</strong> — Sinalização de segurança: padroniza cores e símbolos para identificação de tubulações de gases, áreas de risco e rotas de fuga.</p>
+                    </div>
+                </div>
+
+                <div class="cards-grid cards-grid-detailed anim-fade-in anim-delay-2" style="margin-top: clamp(10px, 1.5vmin, 20px);">
+                    <div class="app-card anim-slide-up anim-delay-1">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 32 C20 20, 44 20, 44 32 C44 44, 20 44, 20 32" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="10" y1="32" x2="54" y2="32" stroke="currentColor" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h3>Legislação Ambiental</h3>
+                        <p><strong>CONAMA 382/2006</strong> — Estabelece limites máximos de emissão de poluentes atmosféricos para fontes fixas (indústrias), incluindo gases como SO₂, NOₓ e material particulado.</p>
+                        <p><strong>Lei nº 12.305/2010</strong> (Política Nacional de Resíduos Sólidos) — Responsabiliza fabricantes pela logística reversa de embalagens e recipientes, incluindo botijões de GLP.</p>
+                        <p><strong>Resolução ANP nº 18/2004</strong> — Regulamenta as especificações do GLP comercializado no Brasil, garantindo qualidade e segurança do produto.</p>
+                    </div>
+                    <div class="app-card anim-slide-up anim-delay-2">
+                        <div class="app-icon">
+                            <svg class="svg-draw" viewBox="0 0 64 64" width="48" height="48">
+                                <rect x="14" y="14" width="36" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 32 L30 38 L42 26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Consequências do Descumprimento</h3>
+                        <p>Empresas que violam essas normas estão sujeitas a <strong>multas administrativas</strong> (que podem ultrapassar R$ 50 milhões pela ANP), <strong>interdição das instalações</strong>, <strong>responsabilização criminal</strong> dos gestores e <strong>obrigação de reparação</strong> dos danos ambientais e sociais causados.</p>
+                        <p>A fiscalização é realizada pelo <strong>Corpo de Bombeiros</strong>, <strong>Ministério do Trabalho</strong>, <strong>IBAMA</strong>, <strong>ANP</strong> e <strong>órgãos estaduais de meio ambiente</strong>, cada um dentro de sua esfera de competência.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -439,7 +504,12 @@
                     <li>IPCC. <em>Climate Change 2023: Synthesis Report</em>. Contribution of Working Groups I, II and III to the Sixth Assessment Report. Geneva: IPCC, 2023.</li>
                     <li>GLOBAL CCS INSTITUTE. <em>Global Status of CCS 2023</em>. Melbourne: Global CCS Institute, 2023.</li>
                     <li>ABNT. <em>NBR 13523: Instalações de centrais de gás liquefeito de petróleo</em>. Rio de Janeiro: ABNT, 2019.</li>
-                    <li>ERISMAN, J. W. et al. How a century of ammonia synthesis changed the world. <em>Nature Geoscience</em>, v. 1, p. 636-639, 2008.</li>
+                    <li>ABNT. <em>NBR 15514: Área de armazenamento de recipientes transportáveis de GLP</em>. Rio de Janeiro: ABNT, 2007.</li>
+                    <li>ABNT. <em>NBR 15526: Redes de distribuição interna para gases combustíveis em instalações residenciais e comerciais</em>. Rio de Janeiro: ABNT, 2012.</li>
+                    <li>BRASIL. <em>NR-13: Caldeiras, vasos de pressão, tubulações e tanques metálicos de armazenamento</em>. Brasília: Ministério do Trabalho, 2022.</li>
+                    <li>BRASIL. <em>NR-20: Segurança e saúde no trabalho com inflamáveis e combustíveis</em>. Brasília: Ministério do Trabalho, 2022.</li>
+                    <li>CONAMA. <em>Resolução nº 382/2006: Limites máximos de emissão de poluentes atmosféricos para fontes fixas</em>. Brasília: MMA, 2006.</li>
+                    <li>ANP. <em>Resolução nº 18/2004: Especificações do GLP</em>. Brasília: Agência Nacional do Petróleo, 2004.</li>
                     <li>BRASIL. Ministério da Saúde. <em>Resolução RDC nº 50/2002</em>: regulamento técnico para gases medicinais. Brasília: Anvisa, 2002.</li>
                 </ul>
             </div>
